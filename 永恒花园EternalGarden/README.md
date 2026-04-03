@@ -8,16 +8,16 @@
 
 ## 仓库目录
 
-本队代码位于仓库根目录 **`永恒花园EternalGarden/`**。**`contracts`、`backend`、`ui` 三个目录并列在 `src/` 下**（不要和 `docs` 同级），结构如下：
+本队代码位于仓库根目录 **`永恒花园EternalGarden/`**。**`src` 与 `backend`、`ui` 平级**；仅 **`contracts`** 放在 `src/` 下。结构如下：
 
 ```text
 永恒花园EternalGarden/
 ├── README.md
 ├── docs/
-└── src/
-    ├── contracts/            # 合约相关代码
-    ├── backend/              # 后端相关代码
-    └── ui/                   # 前端相关代码（Next.js 主应用）
+├── src/
+│   └── contracts/            # 合约相关代码
+├── backend/                  # 后端相关代码
+└── ui/                       # 前端相关代码（Next.js 主应用）
 ```
 
 `docs/` 内含 `README.en.md`、`VERCEL_DEPLOY.md` 等；视频、PPT 等大文件勿直传仓库，请放外链。
@@ -65,14 +65,14 @@
 | Web3 | wagmi、viem、RainbowKit |
 | 链环境 | Avalanche Fuji（测试网）；计划书亦提及 L2 / Polygon 等扩展方向 |
 | 样式 | Tailwind CSS |
-| 静态演示 | `src/ui/static-web/` 目录下纯 HTML/CSS/JS 版本（可选） |
+| 静态演示 | `ui/static-web/` 目录下纯 HTML/CSS/JS 版本（可选） |
 
 ---
 
 ## 本地开发
 
 ```bash
-cd 永恒花园EternalGarden/src/ui
+cd 永恒花园EternalGarden/ui
 npm install
 npm run dev
 ```
@@ -90,7 +90,7 @@ npm start
 
 ## 部署（Vercel）
 
-在 Vercel 中将 **Root Directory** 设为 **`永恒花园EternalGarden/src/ui`**（本仓库若与其他项目同库，仍须指定该子目录）。详见 [docs/VERCEL_DEPLOY.md](./docs/VERCEL_DEPLOY.md)。
+在 Vercel 中将 **Root Directory** 设为 **`永恒花园EternalGarden/ui`**（本仓库若与其他项目同库，仍须指定该子目录）。详见 [docs/VERCEL_DEPLOY.md](./docs/VERCEL_DEPLOY.md)。
 
 ---
 
@@ -108,10 +108,10 @@ npm start
 
 | 路径 | 说明 |
 |------|------|
-| `src/ui/app/` | Next.js 页面与组件 |
-| `src/ui/static-web/` | 无构建链路的静态 HTML/JS 副本，便于纯静态托管或教学演示 |
+| `ui/app/` | Next.js 页面与组件 |
+| `ui/static-web/` | 无构建链路的静态 HTML/JS 副本，便于纯静态托管或教学演示 |
 | `src/contracts/` | Solidity 合约 |
-| `src/backend/` | 独立后端（占位说明） |
+| `backend/` | 独立后端（占位说明） |
 | `docs/` | 文档与部署说明 |
 
 ---
